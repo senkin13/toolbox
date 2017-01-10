@@ -26,6 +26,7 @@ set fileformat=unix
 
 filetype plugin indent on
 
+autocmd vimenter * NERDTree
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 
 set noswapfile
