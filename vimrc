@@ -54,7 +54,7 @@ function HeaderBash()
     call setline(1, "#!/bin/bash")
     call append(1, "# Pw @ " . strftime('%Y-%m-%d %T', localtime()))
     call append(2, "# Description:")
-    call append(3, "# author: kin.sen@linecorp.com")
+    call append(3, "# author: zhanjin")
     normal G
     normal o
 endf
