@@ -8,12 +8,17 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
-
 Plugin 'nvie/vim-flake8'
-
 Plugin 'vim-scripts/indentpython.vim'
+"Plugin 'davidhalter/jedi-vim'
+Plugin 'tmhedberg/SimpylFold'
+Plugin 'scrooloose/syntastic'
+Plugin 'Yggdroot/indentLine'
 
 call vundle#end()
+
+"let g:indentLine_setColors = 0
+let g:indentLine_char = '|'
 
 au BufRead,BufNewFile *py,*sh
 set tabstop=4
@@ -22,6 +27,10 @@ set shiftwidth=4
 set expandtab
 set autoindent
 set fileformat=unix
+
+set foldmethod=indent
+set foldlevel=99
+nnoremap <space> za
 
 filetype plugin indent on
 
@@ -32,6 +41,8 @@ set noswapfile
 
 set encoding=utf-8
 
+set number
+
 syntax on
 
 "python
@@ -41,7 +52,7 @@ function HeaderPython()
     call append(2, "# Pw @ " . strftime('%Y-%m-%d %T', localtime()))
     call append(3, "# Description:")
     call append(4, "")
-    call append(5, "__author__ = 'zhanjin'")
+    call append(5, "__author__ = 'kin.sen@linecorp.com'")
     normal G
     normal o
     normal o
@@ -54,7 +65,7 @@ function HeaderBash()
     call setline(1, "#!/bin/bash")
     call append(1, "# Pw @ " . strftime('%Y-%m-%d %T', localtime()))
     call append(2, "# Description:")
-    call append(3, "# author: zhanjin")
+    call append(3, "# author: kin.sen@linecorp.com")
     normal G
     normal o
 endf
