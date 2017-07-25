@@ -52,7 +52,7 @@ function HeaderPython()
     call append(2, "# Pw @ " . strftime('%Y-%m-%d %T', localtime()))
     call append(3, "# Description:")
     call append(4, "")
-    call append(5, "__author__ = 'kin.sen@linecorp.com'")
+    call append(5, "__author__ = 'jin.zhan'")
     normal G
     normal o
     normal o
@@ -65,7 +65,7 @@ function HeaderBash()
     call setline(1, "#!/bin/bash")
     call append(1, "# Pw @ " . strftime('%Y-%m-%d %T', localtime()))
     call append(2, "# Description:")
-    call append(3, "# author: kin.sen@linecorp.com")
+    call append(3, "# author: jin.zhan")
     normal G
     normal o
 endf
